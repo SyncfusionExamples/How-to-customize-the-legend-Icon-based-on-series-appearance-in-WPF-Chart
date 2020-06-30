@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegendIconCustomization", "LegendIconCustomization.csproj", "{042567CE-A225-4BF7-8130-DD40DD89C925}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{042567CE-A225-4BF7-8130-DD40DD89C925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042567CE-A225-4BF7-8130-DD40DD89C925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042567CE-A225-4BF7-8130-DD40DD89C925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042567CE-A225-4BF7-8130-DD40DD89C925}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDACECF0-4336-4EED-8C42-F6C11D45D03E}
+	EndGlobalSection
+EndGlobal
