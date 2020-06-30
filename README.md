@@ -1,0 +1,1 @@
+# How-to-customize-the-legend-Icon-based-on-series-appearance-in-WPF-Chart
