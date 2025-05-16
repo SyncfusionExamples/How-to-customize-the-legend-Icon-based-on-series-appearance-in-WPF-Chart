@@ -6,53 +6,57 @@ This example illustrates how to customize the legend icon based on series appear
 
 **Step 2:** The customized line style of [FastLineSeries](https://help.syncfusion.com/cr/Syncfusion.UI.Xaml.Charts.FastLineSeries.html) can be shown in the legend icon by applying the [LegendIconTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartSeriesBase.html#Syncfusion_UI_Xaml_Charts_ChartSeriesBase_LegendIconTemplate) as shown in the following code example. 
 
+**XAML**
+
 ```
 <Grid>
-    <Grid.DataContext>
-        <local:ViewModel></local:ViewModel>
-    </Grid.DataContext>
-    <chart:SfChart Margin="10">
-        <chart:SfChart.Legend>
-            <chart:ChartLegend></chart:ChartLegend>
-        </chart:SfChart.Legend>
-        <chart:SfChart.PrimaryAxis>
-            <chart:CategoryAxis  LabelFormat="MMM/dd"></chart:CategoryAxis>
-        </chart:SfChart.PrimaryAxis>
-        <chart:SfChart.SecondaryAxis>
-            <chart:NumericalAxis ></chart:NumericalAxis>
-        </chart:SfChart.SecondaryAxis>
-        <chart:FastLineSeries Label="Series 1" StrokeDashArray="1,1" ItemsSource="{Binding DataCollection}" XBindingPath="Date" YBindingPath="Value">
-            <chart:FastLineSeries.LegendIconTemplate>
-                <DataTemplate >
-                    <Polyline Points="0,8,25,8" Stroke="{Binding Interior}" StrokeThickness="{Binding StrokeThickness}" StrokeDashArray="1,1"/>
-                </DataTemplate>
-            </chart:FastLineSeries.LegendIconTemplate>
-        </chart:FastLineSeries>
-    </chart:SfChart>
-</Grid>
+    <Grid.DataContext>
+        <local:ViewModel/>
+    </Grid.DataContext>
+    
+    <chart:SfChart Margin="10">
+        
+        <chart:SfChart.Legend>
+            <chart:ChartLegend></chart:ChartLegend>
+        </chart:SfChart.Legend>
+        
+        <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis  LabelFormat="MMM/dd"/>
+        </chart:SfChart.PrimaryAxis>
+        
+        <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis />
+        </chart:SfChart.SecondaryAxis>
+        
+        <chart:FastLineSeries Label="Series 1" StrokeDashArray="1,1" ItemsSource="{Binding DataCollection}" XBindingPath="Date" YBindingPath="Value">
+            <chart:FastLineSeries.LegendIconTemplate>
+                <DataTemplate >
+                    <Polyline Points="0,8,25,8" Stroke="{Binding Interior}" StrokeThickness="{Binding StrokeThickness}" StrokeDashArray="1,1"/>
+                </DataTemplate>
+            </chart:FastLineSeries.LegendIconTemplate>
+        </chart:FastLineSeries>
+    </chart:SfChart>
+    </Grid>
 ```
+
+**Model**
+
 ```
 public class Data
 {
+    public DateTime Date { get; set; }
+    public double Value { get; set; }
+
     public Data(DateTime date, double value)
     {
         Date = date;
         Value = value;
     }
-
-    public DateTime Date
-    {
-        get;
-        set;
-    }
-
-    public double Value
-    {
-        get;
-        set;
-    }
 }
 ```
+
+**ViewModel**
+
 ```
 public class ViewModel
 {
@@ -98,7 +102,15 @@ public class ViewModel
 
 ![LegendIcon Customization WPF Chart](https://user-images.githubusercontent.com/53489303/200763243-f6d50ba1-7c88-443f-8d80-44a07d42e9c3.png)
 
-KB article - [How to customize the legend icon based on series appearance in WPF Chart](https://www.syncfusion.com/kb/11672/how-to-customize-the-legend-icon-based-on-series-appearance-in-wpf-chart)
+
+## Troubleshooting
+
+#### Path too long exception
+
+If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project.
+
+For more details, refer to the KB on [How to customize the legend icon based on series appearance in WPF Chart](https://www.syncfusion.com/kb/11672/how-to-customize-the-legend-icon-based-on-series-appearance-in-wpf-chart).
+
 
 ### See also
 
